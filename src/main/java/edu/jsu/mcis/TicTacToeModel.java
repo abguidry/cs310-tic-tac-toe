@@ -98,18 +98,23 @@ public class TicTacToeModel {
         if(isValidSquare(row,col) == false){
           return false;
         }
-        else if (issquareMarked(row,col) == true){
+        else if (isSquareMarked(row,col) == true){
           return false;
         }
         else{
           if(isXTurn() == true){
-            board[row][col] = Mark.O;
-            xTurn = true;
+            board[row][col] = Mark.X;
+            xTurn = false;
 
+          }
+          
+          else if (isXTurn() == false){
+              board[row][col] = Mark.O;
+              xTurn = true;
           }
           return true;
         }
-        return false; // remove this line later!
+        
 
     }
 
