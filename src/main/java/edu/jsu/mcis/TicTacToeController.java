@@ -30,7 +30,7 @@ public class TicTacToeController {
           view.showBoard(model,toString());
           TicTacToeMove Move = view.getNextMove(model.isXTurn());
           if(!model.makeMark(Move.getRow(), Move.getCol()))
-              view,showInputError();
+              view.showInputError();
         }
 
         /* After the game is over, show the final board and the winner */
